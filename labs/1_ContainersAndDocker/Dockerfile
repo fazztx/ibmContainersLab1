@@ -1,8 +1,13 @@
+# Specifies the base image...
 FROM node:9.4.0-alpine
+# Add the following files to the image...
 COPY app.js .
 COPY package.json .
+# Execute the following commands...
 RUN npm install &&\
     apk update &&\
     apk upgrade
+# Exposes the port...
 EXPOSE  8080
+# Runs the app.
 CMD node app.js
