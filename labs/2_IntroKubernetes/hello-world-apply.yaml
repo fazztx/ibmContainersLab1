@@ -21,7 +21,8 @@ spec:
         run: hello-world
     spec:
       containers:
-      - image: us.icr.io/<my_namespace>/hello-world:1
+      - image: my-eventual-test-pod
+      # us.icr.io/<my_namespace>/hello-world:1
         imagePullPolicy: Always
         name: hello-world
         ports:
